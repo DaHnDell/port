@@ -1,0 +1,76 @@
+.portfolio.section {
+    background-color: var(--surface-color);
+    color: var(--default-color);
+    padding: 60px 20px;
+  }
+  
+  .portfolio .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .portfolio .section-title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+  
+  .portfolio .section-title p {
+    font-size: 15px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+  }
+  
+  /* 그리드 레이아웃 */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* 카드 박스 */
+  .portfolio-card {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .portfolio-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .portfolio-card-body {
+    padding: 20px;
+  }
+  
+  .portfolio-card-body h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+  }
+  
+  .portfolio-card-body p {
+    font-size: 14px;
+    color: var(--default-color);
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .portfolio-card-body .btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .portfolio-card-body .btn:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  }
+  

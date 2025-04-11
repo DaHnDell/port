@@ -1,7 +1,6 @@
 // src/components/about/AboutSection.jsx
 import React from "react";
-import "../../css/aboutsection.css";
-import profileImg from "../../assets/img/my-profile-img.jpg"; // 실제 경로에 맞게 조정하세요
+import '../css/sidebarheader.css';
 
 const AboutSection = () => {
   return (

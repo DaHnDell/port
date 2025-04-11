@@ -1,0 +1,462 @@
+
+/* === Sidebar Header === */
+
+/* Sidebar 기본 구조 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: #040b14;
+    color: #fff;
+    padding: 2rem 1rem;
+    z-index: 1030;
+    overflow-y: auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  /* 이름 */
+  .sidebar .sitename {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: "Raleway", sans-serif;
+    color: #ffffff;
+  }
+  
+  /* 네비게이션 링크 */
+  .sidebar .nav-link {
+    color: #a8a9b4;
+    font-family: "Poppins", sans-serif;
+    padding: 12px 16px;
+    transition: 0.3s;
+    font-size: 16px;
+  }
+  
+  .sidebar .nav-link:hover,
+  .sidebar .nav-link.active {
+    color: #ffffff;
+    background-color: #149ddd;
+    border-radius: 5px;
+  }
+  
+  /* 소셜 링크 */
+  .sidebar .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    margin-bottom: 2rem;
+  }
+  
+  .sidebar .social-links a {
+    color: #ffffffcc;
+    font-size: 1.2rem;
+    transition: 0.3s;
+  }
+  
+  .sidebar .social-links a:hover {
+    color: #149ddd;
+  }
+  
+  /* 모바일 메뉴 토글 버튼 */
+  .mobile-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+  }
+  
+  /* 콘텐츠 좌측 여백 확보 */
+  @media (min-width: 992px) {
+    .main-content {
+      margin-left: 300px;
+      padding: 2rem;
+    }
+  }
+
+/* === Hero Section === */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 15px;
+    background: url('../assets/img/hero-bg.jpg') top center/cover no-repeat;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+  }
+  
+  .hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .hero h2 .highlight {
+    color: var(--accent-color);
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  
+  .hero .social-links {
+    margin-top: 20px;
+  }
+  
+  .hero .social-links a {
+    font-size: 1.6rem;
+    display: inline-block;
+    color: #fff;
+    margin: 0 10px;
+    transition: 0.3s;
+  }
+  
+  .hero .social-links a:hover {
+    color: var(--accent-color);
+  }
+  
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 28px;
+    }
+  
+    .hero p {
+      font-size: 16px;
+    }
+  
+    .hero .social-links a {
+      font-size: 1.4rem;
+      margin: 0 6px;
+    }
+  }
+
+/* === About Section === */
+
+.about.section {
+    background-color: var(--background-color); /* light-background로 오버라이드됨 */
+    color: var(--default-color);
+    padding: 60px 20px;
+  }
+  
+  .about .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .about .section-title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+  
+  .about .section-title p {
+    font-size: 15px;
+    color: var(--default-color);
+    opacity: 0.85;
+  }
+  
+  /* Layout */
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  /* 이미지 크기 축소 + 정렬 개선 */
+  .about-img {
+    flex: 0 0 200px;
+    text-align: center;
+  }
+  
+  .about-img img {
+    width: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--surface-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    object-fit: cover;
+  }
+  
+  /* 텍스트 영역 */
+  .about-text {
+    flex: 1 1 400px;
+    font-size: 14px;
+    line-height: 1.75;
+    opacity: 0.95;
+  }
+  
+  /* Info List */
+  .info-list ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+  
+  .info-list li {
+    margin-bottom: 0.5rem;
+    font-size: 13.5px;
+  }
+  
+  .info-list strong {
+    display: inline-block;
+    width: 100px;
+    color: var(--heading-color);
+    font-weight: 600;
+  }
+  
+  /* Skills */
+  .skills {
+    margin-top: 2rem;
+  }
+  
+  .skills h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .skill-tags span {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    font-family: var(--nav-font);
+    transition: background-color 0.3s;
+  }
+  
+  .skill-tags span:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  }
+  
+  /* 반응형 대응 */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  
+    .info-list strong {
+      width: auto;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+  }
+
+/* === Resume Section === */
+
+.resume.section {
+    background-color: var(--background-color);
+    color: var(--default-color);
+    padding: 60px 20px;
+  }
+  
+  .resume .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .resume .section-title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+  
+  .resume .section-title p {
+    font-size: 15px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+  }
+  
+  /* 각 컬럼 타이틀 (학력, 경력) */
+  .resume .resume-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+  }
+  
+  /* 개별 아이템 */
+  .resume .resume-item {
+    position: relative;
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid var(--accent-color);
+  }
+  
+  /* 왼쪽 원형 포인트 */
+  .resume .resume-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    background: var(--background-color);
+  }
+  
+  /* 학교/회사명 */
+  .resume .resume-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--heading-color);
+    margin-bottom: 5px;
+  }
+  
+  /* 기간 */
+  .resume .resume-item h5 {
+    font-size: 14px;
+    background: color-mix(in srgb, var(--accent-color), transparent 85%);
+    color: var(--accent-color);
+    padding: 3px 10px;
+    display: inline-block;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  /* 부제목 (학부 등) */
+  .resume .resume-item em {
+    font-style: italic;
+    font-size: 14px;
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+  }
+  
+  /* 리스트 */
+  .resume .resume-item ul {
+    margin-top: 8px;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+  
+  .resume .resume-item ul li {
+    padding-bottom: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .resume .resume-title {
+      margin-top: 30px;
+    }
+  
+    .resume .resume-item::before {
+      left: -7px;
+    }
+  }
+
+/* === Portfolio Section === */
+
+.portfolio.section {
+    background-color: var(--surface-color);
+    color: var(--default-color);
+    padding: 60px 20px;
+  }
+  
+  .portfolio .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .portfolio .section-title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+  
+  .portfolio .section-title p {
+    font-size: 15px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+  }
+  
+  /* 그리드 레이아웃 */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* 카드 박스 */
+  .portfolio-card {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .portfolio-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .portfolio-card-body {
+    padding: 20px;
+  }
+  
+  .portfolio-card-body h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+  }
+  
+  .portfolio-card-body p {
+    font-size: 14px;
+    color: var(--default-color);
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .portfolio-card-body .btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .portfolio-card-body .btn:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  }

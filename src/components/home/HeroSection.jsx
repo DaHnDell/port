@@ -1,6 +1,5 @@
 // src/components/home/HeroSection.jsx
 import React from "react";
-import '../../assets/styles/main.css';
 
 const HeroSection = () => {
   return (

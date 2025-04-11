@@ -34,8 +34,8 @@ const ContactSection = () => {
     <section id="contact" className="contact-section">
       <h2>Contact Me</h2>
       <form ref={form} onSubmit={sendEmail}>
-        <input type="text" name="user_name" placeholder="Your Name" required />
-        <input type="email" name="user_email" placeholder="Your Email" required />
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" required />
         <button type="submit">Send</button>
       </form>

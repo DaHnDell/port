@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { Offcanvas, Nav, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import '../../assets/styles/main.css';
 
 const SidebarHeader = () => {
   const [show, setShow] = useState(false);

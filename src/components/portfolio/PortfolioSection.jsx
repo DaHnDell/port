@@ -1,6 +1,5 @@
 // src/components/portfolio/PortfolioSection.jsx
 import React from "react";
-import "../../css/portfoliosection.css";
 
 const projects = [
   {

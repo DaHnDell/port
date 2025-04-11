@@ -1,6 +1,5 @@
 // src/components/resume/ResumeSection.jsx
 import React from "react";
-import "../../css/resumesection.css";
 
 const ResumeSection = () => {
   return (

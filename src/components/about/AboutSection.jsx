@@ -1,6 +1,7 @@
 // src/components/about/AboutSection.jsx
 import React from "react";
-import '../css/sidebarheader.css';
+import profileImg from '../../assets/img/my-profile-img.jpg'; 
+
 
 const AboutSection = () => {
   return (

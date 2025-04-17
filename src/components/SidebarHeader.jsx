@@ -1,6 +1,8 @@
 // src/components/SidebarHeader.jsx
 import React, { useState } from "react";
-import { Offcanvas, Nav, Image } from "react-bootstrap";
+import { Offcanvas, Image } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+import Scrollspy from "react-scrollspy";
 import { Link } from "react-router-dom";
 
 const SidebarHeader = () => {
@@ -25,14 +27,22 @@ const SidebarHeader = () => {
           alt="profile"
         />
         <h1 className="sitename mt-3">DahnDell</h1>
-        <Nav className="flex-column text-center mt-4 w-100">
-          <Nav.Link as={Link} to="/">Home</Nav.Link>
-          <Nav.Link as={Link} to="/about">About</Nav.Link>
-          <Nav.Link as={Link} to="/resume">Resume</Nav.Link>
-          <Nav.Link as={Link} to="/portfolio">Portfolio</Nav.Link>
-          <Nav.Link as={Link} to="/services">Services</Nav.Link>
-          <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-        </Nav>
+
+        {/* ScrollSpy 적용 영역만 */}
+        <Scrollspy
+          items={['home', 'about', 'resume', 'service', 'portfolio', 'contact']}
+          currentClassName="active"
+          componentTag="nav"
+          className="nav flex-column text-center mt-4 w-100"
+        >
+          <a href="#home" className="nav-link">Home</a>
+          <a href="#about" className="nav-link">About</a>
+          <a href="#resume" className="nav-link">Resume</a>
+          <a href="#service" className="nav-link">Service</a>
+          <a href="#portfolio" className="nav-link">Portfolio</a>
+          <a href="#contact" className="nav-link">Contact</a>
+        </Scrollspy>
+
         <div className="social-links mt-auto mb-4">
           <a href="https://twitter.com" target="_blank" rel="noreferrer">
             <i className="fab fa-x-twitter"></i>
@@ -63,7 +73,7 @@ const SidebarHeader = () => {
             <Nav.Link as={Link} to="/about" onClick={handleClose}>About</Nav.Link>
             <Nav.Link as={Link} to="/resume" onClick={handleClose}>Resume</Nav.Link>
             <Nav.Link as={Link} to="/portfolio" onClick={handleClose}>Portfolio</Nav.Link>
-            <Nav.Link as={Link} to="/services" onClick={handleClose}>Services</Nav.Link>
+            <Nav.Link as={Link} to="/service" onClick={handleClose}>Services</Nav.Link>
             <Nav.Link as={Link} to="/contact" onClick={handleClose}>Contact</Nav.Link>
           </Nav>
         </Offcanvas.Body>

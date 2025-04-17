@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="hero d-flex align-items-center justify-content-center">
+    <section id="home" className="hero d-flex align-items-center justify-content-center">
       <div className="container text-center">
         <h2>안녕하세요, <span className="highlight"></span></h2>
         <p>사람을 향한 인문학적 시선과</p>

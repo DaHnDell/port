@@ -23,11 +23,11 @@ const Header = () => {
             <Container fluid>
                 <Navbar.Brand as={Link} to="/" className="d-flex align-items-center gap-2">
                     <Image
-                        src="/assets/img/my-profile-img.jpg"
+                        src="src\assets\img\89357492.png"
                         roundedCircle
                         width="40"
                         height="40"
-                        alt="profile"
+                        alt="git profile"
                     />
                     <span>DahnDell</span>
                 </Navbar.Brand>

@@ -5,7 +5,7 @@ import { Nav } from "react-bootstrap";
 import Scrollspy from "react-scrollspy";
 import { Link } from "react-router-dom";
 
-const SidebarHeader = () => {
+const SidebarHeader = ({ className = '' }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -18,7 +18,7 @@ const SidebarHeader = () => {
       </button>
 
       {/* Desktop Sidebar */}
-      <aside className="sidebar d-none d-lg-flex flex-column align-items-center">
+      <aside className={`sidebar d-none d-lg-flex flex-column align-items-center ${className}`}>
         <Image
           src="/assets/img/my-profile-img.jpg"
           roundedCircle
